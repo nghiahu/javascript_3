@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Truthy và falsy là những giá trị mà JavaScript khi ép về kiểu Boolean, hoặc trong một ngữ cảnh Boolean, nó sẽ cho ra giá trị true hoặc false.
+        // Các giá trị được xem là truthy: chuỗi khác rỗng, số khác 0 và tất cả các object. // Bao gồm cả [ ] và { } vì mảng rỗng và chuỗi rỗng vẫn là object.
+        // Các giá trị được xem là falsy: undefined, null, false, 0, -0, 0n, NaN.
+let x = "";
+let y = !!x;
+console.log(y);
+
+let z = Boolean(x);
+console.log(z); 
+
+if (x == false) {
+  console.log("x is falsy");
+} else {
+  console.log("x is truthy");
+}
+
+    </script>
+</body>
+</html>

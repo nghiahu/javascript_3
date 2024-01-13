@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = +prompt("Nhập vào một số có 4 chữ số");
+        let nghin , chuc , tram ,don_vi;
+
+        nghin = Math.floor( number / 1000);
+        tram = Math.floor((number % 1000) / 100);
+        chuc = Math.floor((number % 100) / 10);
+        don_vi = Math.floor(number % 10);
+
+        console.log(nghin);
+        console.log(tram);
+        console.log(chuc);
+        console.log(don_vi);
+
+    </script>
+</body>
+</html>

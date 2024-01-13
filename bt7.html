@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("Nhập vào a");
+        let b = +prompt("Nhập vào b");
+        let c = +prompt("Nhập vào c");
+        let delta ,x1,x2;
+        delta = parseInt(delta);
+        x1 = parseInt(x1);
+        x2 = parseInt(x2);
+        if(a === 0){
+            console.log("Phương trình vô nghiệm");
+        }else{
+            delta = (b**2) - (4*a*c);
+            if(delta > 0){
+                x1 = (-b + Math.sqrt(delta)) / (2*a);
+                x2 = (-b - Math.sqrt(delta)) / (2*a);
+                console.log("Phương trình có hai nghiệm phân biệt:" + "x1= " + x1 +"," + "x2= " + x2);
+            }else if(delta === 0){
+                x1 = -b / (2*a);
+                console.log("Phương trình có nghiệm kép x1 = x2 = " + x1);
+            }else{
+                console.log("Phương trình vô nghiệm");
+            }
+        }
+    </script>
+</body>
+</html>

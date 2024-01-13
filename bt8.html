@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let a, b, op;
+let result;
+let valid = true;
+a = +prompt("Nhập số thứ nhất:");
+b = +prompt("Nhập số thứ hai:");
+op = prompt("Nhập phép tính (+, -, *, /):");
+
+switch (op) {
+  case "+":
+    result = a + b;
+    break;
+  case "-":
+    result = a - b;
+    break;
+  case "*":
+    result = a * b;
+    break;
+  case "/":
+    if (b == 0) {
+      valid = false;
+      console.log("Không hợp lệ: chia cho 0");
+    } else {
+      result = a / b;
+    }
+    break;
+  default:
+    valid = false;
+    console.log("Không hợp lệ: phép tính không tồn tại");
+}
+if (valid) {
+  console.log(a + " " + op + " " + b + " = " + result);
+}
+
+    </script>
+</body>
+</html>

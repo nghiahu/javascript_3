@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let month, year;
+let days;
+let valid = true;
+month = +prompt("Nhập tháng:");
+year = +prompt("Nhập năm:");
+
+if (year < 0 || month < 1 || month > 12) {
+  valid = false;
+  console.log("Giá trị nhập vào không hợp lệ");
+} else {
+  switch (month) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      days = 31;
+      break;
+    case 2:
+      if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        days = 29;
+      } else {
+        days = 28;
+      }
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      days = 30;
+      break;
+  }
+}
+if (valid) {
+  console.log("Tháng " + month + " năm " + year + " có " + days + " ngày");
+}
+    </script>
+</body>
+</html>
